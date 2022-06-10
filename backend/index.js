@@ -14,7 +14,8 @@ const port = config.get('port')
 app.use(express.json({ extended: false }))
 
 // Routes
-
+app.use('/',require('./routes/index'))
+app.use('/api/url',require('./routes/url'))
 
 
 app.listen(port, () => {
