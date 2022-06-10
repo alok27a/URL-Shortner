@@ -17,6 +17,11 @@ const port = config.get('port')
 // Middleware
 app.use(express.json({ extended: false }))
 
+app.get('/', (req, res) => {
+    res.send('<center><h1>Welcome to URL Shortner Backend</h1>')
+})
+
+
 // Routes
 app.use('/',require('./routes/index'))
 app.use('/api/url',require('./routes/url'))
