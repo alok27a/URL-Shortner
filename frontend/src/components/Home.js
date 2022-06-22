@@ -4,13 +4,13 @@ import React, { useContext, useEffect, useState } from 'react'
 function Home() {
 
     const [longUrl, setUrl] = useState();
-    
+
 
     function postUrl(e) {
         e.preventDefault();
         try {
             console.log(longUrl)
-            axios.post("http://localhost:5000/api/url/shorten", {
+            axios.post("https://url-shortner-backend-tau.vercel.app/api/url/shorten", {
                 longUrl
             }).then((response) => {
                 console.log(response.data.shortUrl)
@@ -38,7 +38,12 @@ function Home() {
                             </button>
                         </div>
                         <div className="shorturl">
-                           <h3 className='text-xl font-bold'> Your shortend URL is {longUrl}</h3>
+                            {
+                                longUrl &&
+                                <>
+                                    <h3 className='text-xl font-bold'> Your shortend URL is {longUrl}</h3>
+                                </>
+                            }
                         </div>
                     </div>
                 </form>
