@@ -1,5 +1,3 @@
 {
-    "mongoURI": "",
-    "baseUrl": "http://urlshortner.imalok.me",
-    "port": "5000"
+    "baseUrl": "http://urlshortner.imalok.me"
 }
