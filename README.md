@@ -14,7 +14,7 @@ This is a web app to shorten long URLs.
 ## <img src="https://cdn-icons-png.flaticon.com/512/427/427735.png" width="32" height="32">  Features
 
 * Shorten URLs.
-* Share your shortened url with others.
+* Share your shortened URL with others.
 
 ## <img src="https://techstackapps.com/media/2019/11/TechStackApps-logo-icon.png" width="32" height="32"> Tech Stack
 
