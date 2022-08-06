@@ -1,29 +1,33 @@
 <!-- HEADING WITH IMAGE -->
 
-![cover](https://user-images.githubusercontent.com/73957024/174871043-f262a18a-3353-4297-a987-ada115041891.png)
+![cover](https://user-images.githubusercontent.com/73957024/183240063-fbd7316c-d5db-432f-81dc-7548ea130aa0.png)
  <div align="center">
-  <h1 align="center">URL Shortner</h1>
+  <h1 align="center">SafeChain</h1>
 </div>
 
 <!-- ABOUT THE PROJECT -->
 
 ## <img src="https://openclipart.org/download/307315/1538154643.svg" width="32" height="32"> About The Project
 
-This is a web app to shorten long URLs.
+A personal data management software that is prepared in a manner that makes it impervious to any attacks. Essentially, your details after creating an account are stored on a decentralized blockchain that even we cannot access. This data is then further encrypted, and can only be decrypted via a unique key that is provided to you upon registration.
 
-## <img src="https://cdn-icons-png.flaticon.com/512/427/427735.png" width="32" height="32">  Features
+As the world moves forward and more and more concerns regarding 'private' data come up, the need for decentralizing control over stored data becomes a global priority. Thus, this project is our humble contribution towards taking the control of data away from large corporations towards smaller, well-connected communities and individuals.
 
-* Shorten URLs.
-* Share your shortened URL with others.
+## <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" width="32" height="32">  Use Cases
+Our core user is basically the everyday common man who wants to ensure basic safety and security for his data. All the people whose data is currently collected and sold without their knowledge are our user base.
+
+Our core user needs a secure, decentralized platform to store their important, personal data. A simple, sleek UI paired with a secure, robust back-end that uses an extra layer of encryption. should meet the average user's needs.
+
+## <img src="https://cdn-icons-png.flaticon.com/512/427/427735.png" width="32" height="32">  Conclusion
+
+In conclusion, we hope to create a software that stores your most important personal data in a manner such that no one can access it. Through this venture, we not only provide our users with the comfort and security of absolute protection, but also give them control over the most important commodity of today's times, i.e. their data. Ours is among the most innovative approaches to one of the most challenging questions of our times.
 
 ## <img src="https://techstackapps.com/media/2019/11/TechStackApps-logo-icon.png" width="32" height="32"> Tech Stack
 
 * React.js
-* Tailwind CSS
-* Node.js
-* Express.js
-* MongoDB
+* ChakraUI
 * JavaScript
+
 
 <!-- SCREENSHOTS -->
 
@@ -39,11 +43,11 @@ In order to get a copy of the project you will require you to have Node.js (v14+
 Open the terminal in the folder in which you wish to clone the repository and enter the following command:
 ``` 
 git clone https://github.com/alok27a/URL-Shortner.git
-cd URL-Shortner
+cd cognition-frontend
 ```
 Install all the NPM packages:
 ```
-npm i 
+npm i -f
 ```
 In order to run the frontend:
 ```
