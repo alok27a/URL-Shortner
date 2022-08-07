@@ -9,7 +9,7 @@ const Url = require('../models/URL')
 // @desc    Create short URL
 router.post('/shorten', async (req, res) => {
     const { longUrl } = req.body
-    const baseUrl = config.get('baseUrl')
+    const baseUrl = "https://link.imalok.me"
 
     if (!validurl.isUri(baseUrl)) {
         res.status(401).json("Invalid base URL")
