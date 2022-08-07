@@ -13,14 +13,14 @@ app.use(express.json())
 connectDB()
 
 
-const port = process.env.PORT
+const port = process.env.PORT || 3000
 
 // Middleware
 app.use(express.json({ extended: false }))
 
-app.get('/', (req, res) => {
-    res.send('<center><h1>Welcome to URL Shortner Backend</h1>')
-})
+// app.get('/', (req, res) => {
+//     res.send('<center><h1>Welcome to URL Shortner Backend</h1>')
+// })
 
 
 // Routes
