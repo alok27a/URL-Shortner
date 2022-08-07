@@ -3,7 +3,7 @@ import React, { useContext, useEffect, useState } from 'react'
 
 function Home() {
 
-    const [longUrl, setUrl] = useState();
+    const [longUrl, setUrl] = useState('');
 
 
     async function postUrl(e) {
@@ -28,8 +28,10 @@ function Home() {
                     "Access-Control-Allow-Origin": "*"
                 }
             })
-            console.log(result)
-            setUrl(result)
+            console.log(longUrl)
+            let res = await result.json() 
+            console.log(res)
+            setUrl(res.shortUrl)
 
         } catch (error) {
             console.log(error)
@@ -48,7 +50,7 @@ function Home() {
                             <input className="border py-2 px-3 text-grey-darkest" type="text" name="longUrl" id="longUrl" onChange={(e) => setUrl(e.target.value)} />
                         </div>
                         <div className="submit my-5">
-                            <button type="submit" className="bg-violet-500 hover:bg-violet-600 active:bg-violet-700 focus:outline-none focus:ring focus:ring-violet-300 p-3 text-xl font-bold rounded-2xl" >
+                            <button type="submit" onClick={postUrl} className="bg-violet-500 hover:bg-violet-600 active:bg-violet-700 focus:outline-none focus:ring focus:ring-violet-300 p-3 text-xl font-bold rounded-2xl" >
                                 GET SHORT URL
                             </button>
                         </div>

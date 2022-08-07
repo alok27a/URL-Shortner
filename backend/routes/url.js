@@ -16,7 +16,7 @@ router.post('/shorten', async (req, res) => {
     }
     // Create url code
     const urlCode = shortid.generate()
-
+    console.log(longUrl)
     if (validurl.isUri(longUrl)) {
         try {
             let url = await Url.findOne({ longUrl })
