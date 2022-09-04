@@ -1,5 +1,6 @@
 import { Button, Input, Text, useToast } from '@chakra-ui/react';
 import React, { useState } from 'react'
+import { DarkMode } from '@chakra-ui/react';
 
 function Home() {
 
@@ -54,7 +55,9 @@ function Home() {
     }
 
     return (
+        <DarkMode>
         <>
+
             <div className='flex flex-col my-10 justify-around text-center'>
                 <div className="heading">
                     <h1 className='text-3xl font-bold '>Enter Your URL Here</h1>
@@ -81,6 +84,7 @@ function Home() {
                 </form>
             </div>
         </>
+        </DarkMode>
     )
 }
 
