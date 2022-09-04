@@ -1,10 +1,11 @@
-import axios from 'axios';
-import React, { useContext, useEffect, useState } from 'react'
+import { Button, Input, Text, useToast } from '@chakra-ui/react';
+import React, { useState } from 'react'
 
 function Home() {
 
     const [longUrl, setUrl] = useState('');
-
+    const [result, setResult] = useState(false);
+    const toast = useToast()
 
     async function postUrl(e) {
         e.preventDefault();
@@ -29,12 +30,26 @@ function Home() {
                 }
             })
             console.log(longUrl)
-            let res = await result.json() 
+            let res = await result.json()
             console.log(res)
             setUrl(res.shortUrl)
-
+            setResult(true)
+            toast({
+                type: 'success',
+                description: "Short URL generated successfully",
+                status: 'success',
+                duration: 9000,
+                isClosable: true
+            })
         } catch (error) {
             console.log(error)
+            toast({
+                type: 'error',
+                description: "Something went wrong",
+                status: 'error',
+                duration: 9000,
+                isClosable: true      
+            })
         }
     }
 
@@ -47,18 +62,18 @@ function Home() {
                 <form onSubmit={postUrl}>
                     <div className="input flex flex-col my-10 mx-14 text-center">
                         <div className="input">
-                            <input className="border py-2 px-3 text-grey-darkest" type="text" name="longUrl" id="longUrl" onChange={(e) => setUrl(e.target.value)} />
+                            <Input className="border py-2 px-3 text-grey-darkest" type="text" name="longUrl" id="longUrl" onChange={(e) => setUrl(e.target.value)} size="md" ml="10px" mr="10px"/>
                         </div>
                         <div className="submit my-5">
-                            <button type="submit" onClick={postUrl} className="bg-violet-500 hover:bg-violet-600 active:bg-violet-700 focus:outline-none focus:ring focus:ring-violet-300 p-3 text-xl font-bold rounded-2xl" >
+                            <Button type="submit" onClick={postUrl} className="bg-violet-500 hover:bg-violet-600 active:bg-violet-700 focus:outline-none focus:ring focus:ring-violet-300 p-3 text-xl font-bold rounded-2xl" >
                                 GET SHORT URL
-                            </button>
+                            </Button>
                         </div>
-                        <div className="shorturl">
+                        <div className="shorturl" >
                             {
-                                longUrl &&
+                                result &&
                                 <>
-                                    <h3 className='text-xl font-bold'> Your shortend URL is {longUrl}</h3>
+                                    <Text className='text-xl font-bold' color="grey"> Your shortend URL is {longUrl}</Text>
                                 </>
                             }
                         </div>
