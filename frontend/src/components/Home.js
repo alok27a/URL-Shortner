@@ -19,7 +19,7 @@ function Home() {
             //     setUrl(response.data.shortUrl)
             // })
 
-            let result = await fetch("https://www.link.imalok.me/api/url/shorten", {
+            let result = await fetch("https://url-shortner-backend-tau.vercel.app/api/url/shorten", {
                 method: "POST",
                 body: JSON.stringify({
                     "longUrl": longUrl
