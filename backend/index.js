@@ -7,7 +7,7 @@ var cors = require('cors')
 const app = express()
 
 app.use(cors({
-  origin: ['http://localhost:3000', 'https://www.urlshortner.imalok.me/','url-shortner-gamma-murex.vercel.app','urlshortner.imalok.me']
+  origin: ['http://localhost:3000', 'https://www.urlshortner.imalok.me/','https://url-shortner-gamma-murex.vercel.app','https://urlshortner.imalok.me']
 }));
 app.use(express.json())
 
