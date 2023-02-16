@@ -24,6 +24,13 @@ app.use(express.json({ extended: false }))
 //     res.send('<center><h1>Welcome to URL Shortner Backend</h1>')
 // })
 
+app.all('*', function(req, res, next) {
+  res.header("Access-Control-Allow-Origin", "*"); // replace with your domain
+  res.header("Access-Control-Allow-Headers", "X-Requested-With");
+  res.header("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS");
+  next();
+});
+
 
 // Routes
 app.use('/',require('./routes/index'))
