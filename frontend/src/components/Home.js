@@ -11,15 +11,8 @@ function Home() {
     async function postUrl(e) {
         e.preventDefault();
         try {
-            // console.log(longUrl)
-            // axios.post("https://www.link.imalok.me/api/url/shorten", {
-            //     longUrl
-            // }).then((response) => {
-            //     console.log(response.data.shortUrl)
-            //     setUrl(response.data.shortUrl)
-            // })
-
-            let result = await fetch("https://url-shortner-backend-tau.vercel.app/api/url/shorten", {
+            
+            let result = await fetch("https://www.link.imalok.me/api/url/shorten", {
                 method: "POST",
                 body: JSON.stringify({
                     "longUrl": longUrl
